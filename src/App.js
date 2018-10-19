@@ -11,7 +11,11 @@ class App extends Component {
       isLoading: true,
       errors: null
     };
-    this.date = '2018-10-15';
+    var todaysdate = new Date();
+    var yyyy = todaysdate.getFullYear();
+    var mm = todaysdate.getMonth()+1; // getMonth() is zero-based
+    var dd  = todaysdate.getDate();
+    this.date = String(yyyy + '-' + mm + '-' + dd);
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
   }
